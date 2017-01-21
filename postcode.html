@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html xmlns="">
+
+<!--  Materialise CSS-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+<!-- jQuery Ui CSS-->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<!-- jQuery JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+<!-- Materialise JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<!-- jQuery Ui JS-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- Angular  JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!-- postcode JS-->
+<script src="js/postcode.js"></script>
+<body>
+
+
+<div style="margin-top: 100px;" ng-app="postcodeApp" ng-controller="postcodeCTL">
+
+    <label for="postcode">Postcode : </label><input id="postcode" list="postcodeDatalist" type="text" autocomplete="off" ng-change="fetchData()" ng-model="string"><br>
+
+    <datalist id="postcodeDatalist">
+        <option ng-repeat="(key, value) in data" value="{{ value }}">
+    </datalist>
+
+</div>
+
+</body>
+</html>
